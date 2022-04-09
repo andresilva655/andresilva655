@@ -1,15 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Starting') {
       steps {
-        echo '"starting..."'
+        echo 'starting...'
       }
     }
 
-    stage('script') {
+    stage('Script') {
       steps {
-        sshCommand(command: 'apt update', sudo: true)
+        sh 'sh run_build_script.sh'
       }
     }
 
